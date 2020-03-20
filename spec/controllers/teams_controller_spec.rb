@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe TeamsController, type: :controller do
   include Devise::Test::ControllerHelpers
 
-  before(:each) do
+  before do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @current_user = create(:user)
     sign_in @current_user
@@ -60,7 +60,7 @@ RSpec.describe TeamsController, type: :controller do
   end
 
   describe "POST #create" do
-    before(:each) do
+    before do
       @team_attributes = attributes_for(:team, user: @current_user)
       post :create, params: {team: @team_attributes}
     end
