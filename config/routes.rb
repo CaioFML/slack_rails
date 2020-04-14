@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :talks, only: [:show]
   resources :team_users, only: [:create, :destroy]
   devise_for :users, :controllers => { registrations: 'registrations' }
+  mount ActionCable.server => '/cable'
 end
