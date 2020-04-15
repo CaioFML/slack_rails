@@ -16,9 +16,9 @@ $(document).on 'turbolinks:load', ->
         }
         success: (data, text, jqXHR) ->
           window.add(data['user']['name'], data['user']['id'], 'user')
-          Materialize.toast('Success in add User &nbsp;<b>:(</b>', 4000, 'green')
+          Materialize.toast('Success in add User &nbsp;<b>:)</b>', 4000, 'green')
         error: (jqXHR, textStatus, errorThrown) ->
-          Materialize.toast('Problem in add User &nbsp;<b>:(</b>', 4000, 'red')
+          Materialize.toast('Problem in add User &nbsp;<b>:)</b>', 4000, 'red')
 
 
     $('#add_user_modal').modal('close')

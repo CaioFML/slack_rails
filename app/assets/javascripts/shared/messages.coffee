@@ -39,7 +39,7 @@ window.open = (id, type) ->
             do ->
               window.add_message(message['body'], message['date'], message['user']['name'])
       error: (jqXHR, textStatus, errorThrown) ->
-        Materialize.toast('Problem to get ' + type + ' informations &nbsp;<b>:(</b>', 4000, 'red')
+        Materialize.toast('Problem to get ' + type + ' informations &nbsp;<b>:)</b>', 4000, 'red')
 
     return false
 

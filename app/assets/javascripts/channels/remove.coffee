@@ -14,9 +14,9 @@ $(document).on 'turbolinks:load', ->
         data: {}
         success: (data, text, jqXHR) ->
           $('.channel_' + $('#channel_remove_id').val()).remove()
-          Materialize.toast('Success in delete Channel &nbsp;<b>:(</b>', 4000, 'green')
+          Materialize.toast('Success in delete Channel &nbsp;<b>:)</b>', 4000, 'green')
         error: (jqXHR, textStatus, errorThrown) ->
-          Materialize.toast('Problem to delete Channel &nbsp;<b>:(</b>', 4000, 'red')
+          Materialize.toast('Problem to delete Channel &nbsp;<b>:)</b>', 4000, 'red')
 
     $('#remove_channel_modal').modal('close')
     return false
